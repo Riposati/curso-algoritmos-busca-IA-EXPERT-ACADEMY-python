@@ -6,7 +6,7 @@ class Pilha:
     
     def empilhar(self,cidade):
         if not Pilha.pilhaCheia(self):
-            self.top += 1
+            self.topo += 1
             self.cidades[self.topo] = cidade
         else:
             print("a pilha ja está cheia")

@@ -89,11 +89,11 @@ class Grafo:
             self.l[i].visitado = False
         
     
-'''g = Grafo()
-g.DFS(g.mapa.curitiba, g.mapa.portoUniao)
+g = Grafo()
+g.DFS(g.mapa.portoUniao,g.mapa.curitiba)
 g.initGrafo()
 
-#print( g.mapa.curitiba.visitado)
+'''#print( g.mapa.curitiba.visitado)
 
 print("--------------------------------\n\n")
 
@@ -118,8 +118,7 @@ g.initGrafo()
 print("--------------------------------\n\n")
 
 g.DFS_all(g.mapa.portoUniao)
-g.initGrafo()'''
-
+g.initGrafo()
 
 g = Grafo()
 g.BFS(g.mapa.curitiba,g.mapa.contenda)
@@ -131,3 +130,4 @@ g.initGrafo()
 
 print("--------------------------------\n\n")
 g.BFS(g.mapa.curitiba,g.mapa.contenda)
+'''
