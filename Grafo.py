@@ -44,6 +44,7 @@ class Grafo:
         
         fila = []
         vertice.visitado = True
+        self.l.append(vertice)
         fila.append(vertice)
         
         while(fila):
@@ -55,6 +56,7 @@ class Grafo:
                 if frenteFila.adjacentes[i].cidade.visitado == False:                  
                     fila.append(frenteFila.adjacentes[i].cidade)
                     frenteFila.adjacentes[i].cidade.visitado = True
+                    self.l.append(frenteFila.adjacentes[i].cidade)
                     print(f"**************vertice enfilerado -> {frenteFila.adjacentes[i].cidade.nome}")
             
     def BFS(self,vertice,verticeBuscado):
