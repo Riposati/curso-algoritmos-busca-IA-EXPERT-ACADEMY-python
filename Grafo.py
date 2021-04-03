@@ -124,4 +124,10 @@ g.initGrafo()'''
 g = Grafo()
 g.BFS(g.mapa.curitiba,g.mapa.contenda)
 g.initGrafo()
+print("--------------------------------\n\n")
+
 g.BFS_all(g.mapa.curitiba)
+g.initGrafo()
+
+print("--------------------------------\n\n")
+g.BFS(g.mapa.curitiba,g.mapa.contenda)
