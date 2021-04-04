@@ -1,5 +1,3 @@
-#o grafo em si
-
 from Mapa import Mapa
     
 class Grafo:
@@ -90,10 +88,10 @@ class Grafo:
         
     
 g = Grafo()
-g.DFS(g.mapa.portoUniao,g.mapa.curitiba)
+'''g.DFS(g.mapa.portoUniao,g.mapa.curitiba)
 g.initGrafo()
 
-'''#print( g.mapa.curitiba.visitado)
+#print( g.mapa.curitiba.visitado)
 
 print("--------------------------------\n\n")
 
@@ -124,10 +122,12 @@ g = Grafo()
 g.BFS(g.mapa.curitiba,g.mapa.contenda)
 g.initGrafo()
 print("--------------------------------\n\n")
+'''
 
-g.BFS_all(g.mapa.curitiba)
+g.BFS_all(g.mapa.portoUniao)
 g.initGrafo()
 
+'''
 print("--------------------------------\n\n")
 g.BFS(g.mapa.curitiba,g.mapa.contenda)
 '''
