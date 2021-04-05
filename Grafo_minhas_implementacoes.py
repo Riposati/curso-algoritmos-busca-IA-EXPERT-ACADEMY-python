@@ -5,7 +5,7 @@ class Grafo:
         self.mapa = Mapa()
         self.l = []
         
-    def DFS_all(self,vertice):
+    def dfsAll(self,vertice):
         
         print(f"Cidade visitada - {vertice.nome}")
         #print(f"Situacao do vértice - {vertice.visitado}")
@@ -18,9 +18,9 @@ class Grafo:
                 print(f"***************** proxima cidade -> {vertice.adjacentes[j].cidade.nome}")
                 print("\n")
                 #print(f"situacao do vertice -> {vertice.adjacentes[j].cidade.visitado}")
-                self.DFS_all(vertice.adjacentes[j].cidade)
+                self.dfsAll(vertice.adjacentes[j].cidade)
                 
-    def DFS(self,vertice,verticeBuscado):
+    def dfs(self,vertice,verticeBuscado):
         
         if vertice.nome == verticeBuscado.nome:
             return True
@@ -34,11 +34,11 @@ class Grafo:
             if vertice.adjacentes[j].cidade.visitado == False:
                 print(f"***************** proxima cidade -> {vertice.adjacentes[j].cidade.nome}")
                 print("\n")
-                found = self.DFS(vertice.adjacentes[j].cidade,verticeBuscado)
+                found = self.dfs(vertice.adjacentes[j].cidade,verticeBuscado)
                 if found:
                     return True
                 
-    def BFS_all(self,vertice):
+    def bfsAll(self,vertice):
         
         fila = []
         vertice.visitado = True
@@ -57,7 +57,7 @@ class Grafo:
                     self.l.append(frenteFila.adjacentes[i].cidade)
                     print(f"**************vertice enfilerado -> {frenteFila.adjacentes[i].cidade.nome}")
             
-    def BFS(self,vertice,verticeBuscado):
+    def bfs(self,vertice,verticeBuscado):
         
         fila = []
         vertice.visitado = True
@@ -88,43 +88,21 @@ class Grafo:
         
     
 g = Grafo()
-'''g.DFS(g.mapa.portoUniao,g.mapa.curitiba)
+'''g.dfs(g.mapa.portoUniao,g.mapa.curitiba)
 g.initGrafo()
 
 #print( g.mapa.curitiba.visitado)
 
 print("--------------------------------\n\n")
 
-g.DFS(g.mapa.curitiba, g.mapa.portoUniao)
+g.dfsAll(g.mapa.portoUniao)
 g.initGrafo()
 
 print("--------------------------------\n\n")
 
-g.DFS(g.mapa.portoUniao, g.mapa.canoinhas)
-g.initGrafo()
-
-print("--------------------------------\n\n")
-
-g.DFS(g.mapa.curitiba, g.mapa.portoUniao)
-g.initGrafo()
-
-print("--------------------------------\n\n")
-
-g.DFS_all(g.mapa.portoUniao)
-g.initGrafo()
-
-print("--------------------------------\n\n")
-
-g.DFS_all(g.mapa.portoUniao)
-g.initGrafo()
-
-g = Grafo()
-g.BFS(g.mapa.curitiba,g.mapa.contenda)
-g.initGrafo()
-print("--------------------------------\n\n")
 '''
 
-g.BFS_all(g.mapa.portoUniao)
+g.bfs(g.mapa.portoUniao, g.mapa.irati)
 g.initGrafo()
 
 '''
