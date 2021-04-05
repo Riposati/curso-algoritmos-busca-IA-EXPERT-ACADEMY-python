@@ -102,7 +102,7 @@ print("--------------------------------\n\n")
 
 '''
 
-g.bfs(g.mapa.portoUniao, g.mapa.irati)
+g.bfsAll(g.mapa.portoUniao)
 g.initGrafo()
 
 '''
